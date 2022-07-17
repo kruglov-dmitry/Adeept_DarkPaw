@@ -38,7 +38,7 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo apt-get install -y python-dev python-pip libfreetype6-dev libjpeg-dev build-essential") == 0:
+	if os.system("sudo apt-get install -y python-dev python-pip libfreetype6-dev libjpeg-dev build-essential vim git") == 0:
 		break
 
 for x in range(1,4):
@@ -88,11 +88,11 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install opencv-contrib-python==3.4.3.18") == 0:
+	if os.system("sudo pip3 install opencv-contrib-python") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo apt-get -y install libqtgui4 libhdf5-dev libhdf5-serial-dev libatlas-base-dev libjasper-dev libqt4-test") == 0:
+	if os.system("sudo apt-get -y install libqt5gui5 libhdf5-dev libhdf5-serial-dev libatlas-base-dev libqt5webkit5 libqt5test5") == 0:
 		break
 
 for x in range(1,4):
@@ -109,7 +109,7 @@ except:
 	pass
 
 try:
-	os.system("cd //home/pi/create_ap && sudo make install")
+	os.system("cd /home/pi/create_ap && sudo make install")
 except:
 	pass
 
@@ -118,9 +118,8 @@ for x in range(1,4):
 		break
 
 try:
-	os.system('sudo touch //home/pi/startup.sh')
-	with open("//home/pi/startup.sh",'w') as file_to_write:
-		# file_to_write.write("#!/bin/sh\nsudo python3 " + thisPath + "/server/server.py")
+	os.system('sudo touch /home/pi/startup.sh')
+	with open("/home/pi/startup.sh",'w') as file_to_write:
 		file_to_write.write("#!/bin/sh\nsudo python3 " + thisPath + "/server/webServer.py")
 except:
 	pass
