@@ -1,0 +1,14 @@
+luma.oled
+adafruit-pca9685
+flask
+flask_cors
+websockets
+rpi_ws281x
+python3-smbus
+mpu6050-raspberrypi
+numpy
+opencv-contrib-python
+imutils
+zmq
+pybase64
+psutil
